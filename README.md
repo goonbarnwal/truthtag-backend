@@ -1,6 +1,6 @@
 # TruthTag Backend 🚀
 
-Backend API for **TruthTag**, an AI-powered fake job detection system that helps identify suspicious job opportunities and scam patterns.
+Backend API for TruthTag, an AI-powered fake job detection system.
 
 ## 📌 About Project
 
@@ -24,6 +24,35 @@ TruthTag Backend provides APIs to analyze job details and calculate the risk lev
 
 ## 🔗 API Endpoint
 
-### Check Job Risk
+### POST /check
 
-**POST**
+### Request Example
+
+```json
+{
+  "job": "Work from home earn money fast",
+  "company": "ABC",
+  "email": "abc@gmail.com"
+}
+```
+
+### Response Example
+
+```json
+{
+  "status": "🔴 Scam",
+  "risk": 50,
+  "reasons": [
+    "Suspicious keyword found: work from home",
+    "Free email domain used"
+  ]
+}
+```
+
+## 🌐 Live Backend
+
+https://truthtag-backend.onrender.com
+
+## 📂 GitHub Repository
+
+https://github.com/goonbarnwal/truthtag-backend
